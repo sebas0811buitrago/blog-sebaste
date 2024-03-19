@@ -1,11 +1,11 @@
-import { defineConfig } from 'astro/config';
-import mdx from '@astrojs/mdx';
+import { defineConfig } from "astro/config";
+import mdx from "@astrojs/mdx";
 
-import sitemap from '@astrojs/sitemap';
+import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://sebas0811buitrago.github.io',
-	base : './blog-sebaste',
-	integrations: [mdx(), sitemap()],
+  site: "https://sebas0811buitrago.github.io",
+  base: "./blog-sebaste",
+  integrations: [mdx(), sitemap()],
 });
