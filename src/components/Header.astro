@@ -6,7 +6,7 @@ import { getPath } from "../constants/paths";
 
 <header>
   <nav>
-    <h2><a href="/">{SITE_TITLE}</a></h2>
+    <h2><a href={getPath("/")}>{SITE_TITLE}</a></h2>
     <div class="internal-links">
       <HeaderLink href={getPath("/")}>Home</HeaderLink>
       <HeaderLink href={getPath("/blog")}>Blog</HeaderLink>
