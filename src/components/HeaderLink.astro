@@ -1,7 +1,7 @@
 ---
 import type { HTMLAttributes } from "astro/types";
 import { getPath } from "../constants/paths";
-import Logger from "./Logger";
+import Logger from "./Logger.tsx";
 type Props = HTMLAttributes<"a">;
 
 const { href, class: className, ...props } = Astro.props;
