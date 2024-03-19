@@ -1,7 +1,7 @@
 ---
 import type { HTMLAttributes } from "astro/types";
 import { getPath } from "../constants/paths";
-
+import Logger from "./../components/Logger";
 type Props = HTMLAttributes<"a">;
 
 const { href, class: className, ...props } = Astro.props;
@@ -12,6 +12,12 @@ const isActive = href === pathname || href === getPath("/") + subpath?.[1];
 ---
 
 <a href={href} class:list={[className, { active: isActive }]} {...props}>
+  <Logger
+    client:only="react"
+    href={href}
+    pathname={pathname}
+    getPathName={getPath("/") + subpath?.[1]}
+  />
   <slot />
 </a>
 <style>
